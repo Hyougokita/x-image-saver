@@ -1,0 +1,16 @@
+本目录用于 X Image Saver v1.2.0 的本地 GIF 转换。
+
+工具：FFmpeg 9.0.2，Gyan.dev release essentials x64 静态 Windows 构建。
+ffmpeg.exe 保持上游构建原样，未修改。
+原构建包中的 LICENSE（GPL v3）与 README.txt（构建配置及库版本）随附。
+provenance.json 记录下载地址、原始压缩包 SHA-256 和此二进制 SHA-256。
+安装脚本会在复制工具前验证二进制哈希。
+
+官方 Windows 构建入口：https://ffmpeg.org/download.html
+构建发布者：https://www.gyan.dev/ffmpeg/builds/
+原始构建包：https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-9.0.2-essentials_build.zip
+对应 FFmpeg 源码：https://github.com/FFmpeg/FFmpeg/commit/946fcce07b
+FFmpeg 许可说明：https://ffmpeg.org/legal.html
+
+本工具只由本机助手在动图转换时启动。下载源 MP4 由 Chrome 完成；
+转码命令限定本地 file、pipe 协议，关闭声音、字幕和数据轨道。

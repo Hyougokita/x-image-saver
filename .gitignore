@@ -1,0 +1,27 @@
+# Local binaries are distributed in the release installer, not in Git history.
+native/XImageSaverHost.exe
+native/ffmpeg/ffmpeg.exe
+
+# Build output and local configuration.
+.build/
+dist/
+node_modules/
+__pycache__/
+*.py[cod]
+*.zip
+folders.json
+com.local.x_image_saver.json
+*.log
+*.tmp
+.env
+.env.*
+
+# Saved media is personal data. Extension icons remain tracked.
+*.mp4
+*.gif
+*.jpg
+*.jpeg
+*.webp
+*.avif
+*.png
+!extension/icons/*.png

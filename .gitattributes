@@ -1,0 +1,13 @@
+* text=auto eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.cs text eol=lf
+*.cmd text eol=crlf
+# Preserve the UTF-8 BOM needed by Windows PowerShell 5.1.
+*.ps1 text eol=crlf
+*.exe binary
+*.png binary
+*.zip binary

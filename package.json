@@ -1,0 +1,14 @@
+{
+  "name": "x-image-saver",
+  "version": "1.2.1",
+  "private": true,
+  "type": "module",
+  "description": "Save X images, GIFs and MP4 videos to preset Windows folders",
+  "engines": {
+    "node": ">=22.8.0"
+  },
+  "scripts": {
+    "test": "node scripts/build-content.mjs --check && node --test --test-isolation=none tests/core.test.js tests/media.test.js tests/page.test.js tests/background.test.js",
+    "build": "node scripts/build-content.mjs"
+  }
+}

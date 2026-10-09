@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>媒体存档 · 保存位置</title>
+  <link rel="icon" href="icons/icon48.png">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="header">
+      <div class="brand"><img src="icons/icon48.png" width="44" height="44" alt=""><div><span class="eyebrow">X IMAGE SAVER</span><h1>媒体存档</h1></div></div>
+      <span class="tag">你的收藏，各归其位</span>
+    </header>
+    <section class="intro"><h2>喜欢的图片、动图和视频，右键就收好。</h2><p>设置几个常用文件夹，在 X / Twitter 媒体画面上右键，即可保存到指定位置。</p></section>
+    <div class="connection" role="status"><span id="connection-dot" class="dot"></span><div><strong id="connection-title">正在连接本机助手…</strong><p id="connection-detail">检查完成后，就可以选择保存目录。</p></div><button id="check" class="secondary" type="button">重新检测</button></div>
+    <div class="columns">
+      <section class="card folders-card">
+        <div class="card-heading"><div><h2>保存文件夹</h2><p>菜单按这里的顺序显示，最多 20 个。</p></div><button id="add" class="secondary" type="button">＋ 添加目录</button></div>
+        <div id="folders"></div>
+        <div id="empty" class="empty"><span class="empty-icon">▤</span><h3>先给收藏安排一个位置</h3><p>可以按角色、作者，或自己的收藏习惯分类。</p><button id="add-first" type="button">选择第一个文件夹</button></div>
+        <div class="save-bar"><span id="save-message" role="status" aria-live="polite">修改后记得保存设置。</span><button id="save" type="button">保存设置</button></div>
+      </section>
+      <aside>
+        <section class="card"><h2>保存质量</h2><label class="toggle-row"><span><strong>图片优先保存原图</strong><small>原图不可用时，尝试当前显示的尺寸。</small></span><input id="original" type="checkbox" checked></label><label class="toggle-row"><span><strong>动图保存为 GIF</strong><small>转换完整动图：15 帧/秒，最长边 720 像素。关闭则保存 MP4。</small></span><input id="convert-gifs" type="checkbox" checked></label><p class="note">普通视频保持 MP4，最大 512 MB。图片最大 20 MB，转码 GIF 最大 256 MB。同名文件自动加编号。</p><p class="note">GIF 体积可能更大，转换需要一些时间。直播、仅 HLS 和站外视频暂不支持。</p></section>
+        <section class="card howto"><h2>开始收藏</h2><ol><li>运行新版安装包里的 <code>install.cmd</code>，安装或升级本机助手。</li><li>添加目录、填写菜单名称，然后保存。</li><li>刷新 X 页面，在图片或视频上右键，选择「媒体存档 · 保存到」里的目录。</li></ol><p class="note">未识别的视频可先播放一下再右键。点击保存成功的通知，会打开文件夹并选中下载的文件；保存结果显示在下方。</p></section>
+      </aside>
+    </div>
+    <section class="card recent-card"><div class="card-heading"><div><h2>最近保存</h2><p>最近 10 次操作的结果。</p></div></div><div id="recent"><p class="note">还没有保存记录。</p></div></section>
+    <footer>仅在你选择保存时下载媒体 · 配置保存在本机</footer>
+  </main>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

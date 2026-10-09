@@ -1,0 +1,68 @@
+{
+  "manifest_version": 3,
+  "name": "媒体存档 · X Image Saver",
+  "version": "1.2.1",
+  "description": "在推特图片、动图或视频上右键，选择预设文件夹，直接保存到任意本机目录。",
+  "minimum_chrome_version": "123",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3CFFf/HUaqKywEkbCgzgFefA/K5DhXGfR/366JmLFtunGHtPBWUAutmL/F3M8rM+f92w5lvHvOLBKv/k4pzNkjoAsAc4TyX2oP7XIq3ldPLY5NOGiLN5lPZqh4Mo/umqCdkSFJds4xPNm0F7CDw2F8i7eqdAABfhh037BuNILYNpjtz8ED0eyDGJOYiUl3J/H7RQ+rf9wo7Xb3/y4lbScOKwqHMgfmRVwKkqjhGkX3qIfGp11x9EKRwT5G5i7Pl/3/bA4kHGk0WITFtcahW7U4pIfDq4c+C3q8OkrVV83hDEpE/Mo8OKy4UUSe1MVA/Cc69e0qVVLzOsXcT2unou+QIDAQAB",
+  "permissions": [
+    "contextMenus",
+    "nativeMessaging",
+    "storage",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://pbs.twimg.com/*",
+    "https://video.twimg.com/*",
+    "https://cdn.syndication.twimg.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://*.x.com/*",
+        "https://twitter.com/*",
+        "https://*.twitter.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+    },
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://*.x.com/*",
+        "https://twitter.com/*",
+        "https://*.twitter.com/*"
+      ],
+      "js": [
+        "page-observer.js"
+      ],
+      "world": "MAIN",
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_title": "管理媒体保存目录",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
